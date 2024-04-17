@@ -42,7 +42,7 @@ function set_html(text){
     $('#email').val(text[0]);
     $('#phone').val(text[1]);
     $('#name').val(text[2]);
-    $('#password').val(text[3]);
+    $('#address').val(text[3]);
     $('#hear').val(text[4]);
     $(`.selected`).val(text[5])
 
