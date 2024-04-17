@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Peters Pet Store Review Form</title>
+    <!--Initilize Files-->
+<link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/jqueryui_1.13.2.js"></script>
+    <script src="./scripts/jquery_3.7.0.js"></script>
+    <script src="./scripts/functions.js"></script>
+    <script src="./scripts/form_control.js"></script>
+</head>
+
+<body>
+    <!--Header-->
+    <h1>Peters Pet Store Review Form</h1>
+    <!--Way to "submit" the form-->
+    <form action="javascript:;" onsubmit="submitForm()">
+        <fieldset>
+            <!--Contains contact information-->
+            <legend>Contact Information</legend>
+            <div style="vertical-align: middle">
+                <label>Email: <input id="email" type="email" name="email" size="30" maxlength="100" class="to_empty"
+                        required=""></label><br>
+                <label>Phone Number: <input id="phone" type="tel" name="phone" size="30" maxlength="100"
+                        class="to_empty" required=""></label><br>
+            </div>
+        </fieldset>
+        <fieldset>
+            <!--Contains account information-->
+            <legend>Personal Information</legend> <label>Name:<input id="name" type="text" name="name" size="30"
+                    maxlength="100" class="to_empty" required=""></label><br>
+            <label>Address: <input id="address" type="text" name="address" size="30"
+                    class="to_empty" ></label><br>
+        </fieldset><br>
+        <fieldset>
+            <!--Contains review information-->
+            <legend>Your Review:</legend>
+            <input type="button" id="set" value="Load Info"> 
+            <p><label for="hear">How did you find out about us?</label> <select name="referrer" id="hear" class="to_empty">
+                    <option disabled selected value="">
+                        ⠀
+                    </option>
+                    <option value="0">
+                        Somone Told Me!
+                    </option>
+                    <option value="1">
+                        Online
+                    </option>
+                    <option value="2">
+                        Other
+                    </option>
+                </select> 
+            <!--div allows info to be added based on choice--></p>
+            <div id="message"></div>
+            <p>How was your experience?<br>
+                <label><input type="radio" name="rating" value="0" class="to_uncheck visit"> Great</label> <label><input
+                        type="radio" name="rating" value="1" class="to_uncheck visit"> Poor</label> <label><input
+                        type="radio" name="rating" value="2" class="to_uncheck visit"> Mediocore</label>
+            </p>
+            <p><label for="comment">Comments:</label><br>
+                <textarea rows="4" cols="40" class="to_empty" id="comment"></textarea>
+            </p><label><input id="send_email" type="checkbox" name="subscribe" class="to_uncheck"> Sign Me Up for Notifications</label><br>
+            <input type="submit" value="Submit"> <input type="button" value="Clear" id="clear">
+        </fieldset>
+    </form>
+    <!--Used for an overview when the file is submitted-->
+    <div id="overview"></div>
+    <footer>
+        <!--Initilize links-->
+        <p id="left"><a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fhkevin555.github.io%2FHotel%2F" target="_blank">Validity Link</a></p>
+        <p id="right"><a href="https://github.com/hkevin555/Hotel.git" target="_blank">Source Code Link</a></p>
+    </footer>
+</body>
+
+</html>
